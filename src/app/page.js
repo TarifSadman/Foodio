@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import About from "./components/About";
 import BookATable from "./components/BookTable";
 import Chefs from "./components/Chefs";
@@ -15,7 +14,7 @@ import "./page.css";
 
 export default function Home() {
   return (
-    <Suspense fallback={<>Loading...</>}>
+    <>
       <Header />
       <main className="main">
         <Hero />
@@ -106,6 +105,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-      </Suspense>
+    </>
   );
 }

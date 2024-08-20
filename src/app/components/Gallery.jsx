@@ -1,26 +1,27 @@
 "use client";
-import React, { useEffect } from 'react';
-import 'glightbox/dist/css/glightbox.min.css';
-import GLightbox from 'glightbox';
+import React, { useEffect } from "react";
+import "glightbox/dist/css/glightbox.min.css";
+import GLightbox from "glightbox";
 
 export default function Gallery() {
   const galleryImages = [
-    { id: 1, src: 'assets/img/gallery/gallery-1.jpg', alt: 'Gallery Image 1' },
-    { id: 2, src: 'assets/img/gallery/gallery-2.jpg', alt: 'Gallery Image 2' },
-    { id: 3, src: 'assets/img/gallery/gallery-3.jpg', alt: 'Gallery Image 3' },
-    { id: 4, src: 'assets/img/gallery/gallery-4.jpg', alt: 'Gallery Image 4' },
-    { id: 5, src: 'assets/img/gallery/gallery-5.jpg', alt: 'Gallery Image 5' },
-    { id: 6, src: 'assets/img/gallery/gallery-6.jpg', alt: 'Gallery Image 6' },
-    { id: 7, src: 'assets/img/gallery/gallery-7.jpg', alt: 'Gallery Image 7' },
-    { id: 8, src: 'assets/img/gallery/gallery-8.jpg', alt: 'Gallery Image 8' },
+    { id: 1, src: "assets/img/gallery/gallery-1.jpg", alt: "Gallery Image 1" },
+    { id: 2, src: "assets/img/gallery/gallery-2.jpg", alt: "Gallery Image 2" },
+    { id: 3, src: "assets/img/gallery/gallery-3.jpg", alt: "Gallery Image 3" },
+    { id: 4, src: "assets/img/gallery/gallery-4.jpg", alt: "Gallery Image 4" },
+    { id: 5, src: "assets/img/gallery/gallery-5.jpg", alt: "Gallery Image 5" },
+    { id: 6, src: "assets/img/gallery/gallery-6.jpg", alt: "Gallery Image 6" },
+    { id: 7, src: "assets/img/gallery/gallery-7.jpg", alt: "Gallery Image 7" },
+    { id: 8, src: "assets/img/gallery/gallery-8.jpg", alt: "Gallery Image 8" },
   ];
 
   useEffect(() => {
-    const lightbox = GLightbox({ selector: '.glightbox' });
-
-    return () => {
-      lightbox.destroy();
-    };
+    if (typeof window !== "undefined") {
+      const lightbox = GLightbox({ selector: ".glightbox" });
+      return () => {
+        lightbox.destroy();
+      };
+    }
   }, []);
 
   return (
@@ -42,11 +43,7 @@ export default function Gallery() {
                   className="glightbox"
                   data-gallery="images-gallery"
                 >
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="img-fluid"
-                  />
+                  <img src={image.src} alt={image.alt} className="img-fluid" />
                 </a>
               </div>
             </div>
