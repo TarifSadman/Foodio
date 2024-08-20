@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function BookATable() {
   return (
     <section id="book-a-table" className="book-a-table section">

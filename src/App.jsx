@@ -1,18 +1,19 @@
-import About from "./components/About";
-import BookATable from "./components/BookTable";
-import Chefs from "./components/Chefs";
-import Contact from "./components/Contact";
-import Events from "./components/Events";
-import Gallery from "./components/Gallery";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Menu from "./components/Menu";
-import Specials from "./components/Specials";
-import Testimonial from "./components/Testimonial";
-import WhyUs from "./components/WhyUs";
-import "./page.css";
+import './App.css'
+import About from './components/About'
+import BookATable from './components/BookTable'
+import Chefs from './components/Chefs'
+import Contact from './components/Contact'
+import Events from './components/Events'
+import Gallery from './components/Gallery'
+import Header from "./components/Header"
+import Hero from './components/Hero'
+import Menu from './components/Menu'
+import Specials from './components/Specials'
+import Testimonial from './components/Testimonial'
+import WhyUs from './components/WhyUs'
 
-export default function Home() {
+function App() {
+
   return (
     <>
       <Header />
@@ -106,5 +107,7 @@ export default function Home() {
         </div>
       </footer>
     </>
-  );
+  )
 }
+
+export default App

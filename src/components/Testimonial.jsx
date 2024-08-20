@@ -1,9 +1,8 @@
-"use client";
-import React, { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
+import { useEffect } from "react";
 
 export default function Testimonial() {
   const testimonials = [

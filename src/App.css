@@ -1653,3 +1653,11 @@ section,
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color) 90%, black 15%);
 }
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}

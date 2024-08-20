@@ -1,5 +1,3 @@
-"use client";
-import React from 'react';
 import { Tabs } from 'antd';
 
 export default function Specials() {
